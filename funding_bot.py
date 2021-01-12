@@ -259,6 +259,7 @@ async def dispatch(ws, message):
     print_active_offers()
   elif is_public_funding_ticker(message):
     update_public_ticker(message)
+    await make_offer_decision(ws)
 
 
 async def consume(ws):
